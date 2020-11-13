@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import id.ac.polinema.skorviewmodel.R;
@@ -50,6 +49,7 @@ public class GoalFragment extends Fragment {
 		bundle.putParcelable(ScoreFragment.SCORER_KEY, goalScorer);
 
 		// set goalscorer use viewmodel
+		viewModel.setGoalScorer(requestKey, goalScorer);
 		Navigation.findNavController(view).navigateUp();
 	}
 
